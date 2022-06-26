@@ -1,0 +1,15 @@
+package recursion;
+
+public class arrsortedornot {
+    public static void main(String[] args) {
+        int arr[] = {-123,412,41,53,2,1};
+        boolean ans=sorted(arr,0);
+        System.out.println(ans);
+    }
+    static boolean sorted(int [] arr, int index){
+        if(index==arr.length-1){
+            return true;
+        }
+            return (arr[index]<arr[index+1]) && sorted(arr,index+1);
+    }
+}
